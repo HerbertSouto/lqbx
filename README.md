@@ -1,6 +1,10 @@
 # Projeto de Análise de Dados com Python
 
-Este projeto tem como objetivo realizar consultas em um banco de dados MySQL, manipular os dados obtidos e criar visualizações usando Python. O projeto utiliza as bibliotecas `pandas`, `mysql-connector-python`, `matplotlib` e `python-dotenv` para análise de dados e visualização.
+Este projeto tem como objetivo realizar consultas em um banco de dados MySQL, manipular os dados obtidos e criar visualizações usando Python. O projeto utiliza as bibliotecas `pandas`, `mysql-connector-python`, `matplotlib` e `python-dotenv` para análise de dados e visualização e `Mkdocs` para documentação.
+
+## Documentação Completa
+
+Para acessar a documentação completa do projeto, visite: [Documentação do Projeto](https://herbertsouto.github.io/lqbx/)
 
 ## Estrutura do Projeto
 
@@ -18,4 +22,4 @@ Antes de executar o projeto, você precisa ter o seguinte instalado:
 - Bibliotecas Python necessárias:
 
   ```bash
-  pip install pandas mysql-connector-python matplotlib seaborn
+  pip install pandas mysql-connector-python matplotlib mkdocs
