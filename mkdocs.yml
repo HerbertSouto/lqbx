@@ -4,6 +4,11 @@ nav:
     - Home: index.md
     - Sobre: sobre.md
     - Como usar: usage.md
+    - Detalhamento: details.md
 
 theme:
     name: material
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
