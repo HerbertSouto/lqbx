@@ -1,0 +1,9 @@
+
+site_name: Documentação do Projeto lqbx
+nav:
+    - Home: index.md
+    - Sobre: sobre.md
+    - Como usar: usage.md
+
+theme:
+    name: material
