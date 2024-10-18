@@ -4,7 +4,7 @@ Este projeto tem como objetivo realizar consultas em um banco de dados MySQL, ma
 
 ## Documentação Completa
 
-Para acessar a documentação completa do projeto, visite: [Documentação do Projeto](https://herbertsouto.github.io/lqbx/)
+Para acessar a documentação completa do projeto, visite: [Documentação lqbx](https://herbertsouto.github.io/lqbx/)
 
 ## Estrutura do Projeto
 
