@@ -12,6 +12,8 @@
         <link rel="prev" href="../sobre/">
       
       
+        <link rel="next" href="../details/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
@@ -300,6 +302,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detalhamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -361,19 +383,29 @@
 
 <h1 id="como-usar">Como usar</h1>
 <h2 id="configuracao-do-ambiente">Configuração do ambiente</h2>
+<p>Clone o repositório:</p>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HerbertSouto/lqbx.git
+</code></pre></div>
+Instale as dependências usando <code>poetry install</code> ou <code>pip install -r requirements.txt</code>.</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
+</code></pre></div>
 <ol>
-<li>Clone o repositório: https://github.com/HerbertSouto/lqbx.git.</li>
-<li>Instale as dependências usando <code>poetry install</code> ou <code>pip install -r requirements.txt</code>.</li>
-<li>Configure as variáveis de ambiente para conexão ao banco de dados, altere o arquivo ".env-example" com suas credenciais e renomeie para ".env".</li>
+<li>Configure as variáveis de ambiente para conexão ao banco de dados, altere o arquivo ".env-example" com suas credenciais e renomeie para ".env":</li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="nv">DB_HOST</span><span class="o">=</span>seu_host
+<span class="nv">DB_PORT</span><span class="o">=</span><span class="m">3306</span>
+<span class="nv">DB_USER</span><span class="o">=</span>seu_usuario
+<span class="nv">DB_PASSWORD</span><span class="o">=</span>sua_senha
+<span class="nv">DB_NAME</span><span class="o">=</span>seu_banco
+</code></pre></div>
 <h2 id="executando-o-projeto">Executando o projeto</h2>
 <p>Para executar o script:</p>
-<pre><code class="language-bash">poetry run python case_1.py
-</code></pre>
-<pre><code class="language-bash">poetry run python case_2.py
-</code></pre>
-<pre><code class="language-bash">poetry run python case_3.py
-</code></pre>
+<p><div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>case_1.py
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>case_2.py
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>case_3.py
+</code></pre></div></p>
 
 
 

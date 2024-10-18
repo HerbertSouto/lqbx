@@ -1,0 +1,921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../usage/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>Detalhamento - Documentação do Projeto lqbx</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#consultas-sql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentação do Projeto lqbx" class="md-header__button md-logo" aria-label="Documentação do Projeto lqbx" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação do Projeto lqbx
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Detalhamento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentação do Projeto lqbx" class="md-nav__button md-logo" aria-label="Documentação do Projeto lqbx" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentação do Projeto lqbx
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sobre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sobre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como usar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Detalhamento
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Detalhamento
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-the-10-most-expensive-products-in-the-company" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the 10 most expensive products in the company?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What are the 10 most expensive products in the company?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sections-do-the-bebidas-and-padaria-departments-have" class="md-nav__link">
+    <span class="md-ellipsis">
+      What sections do the 'BEBIDAS' and 'PADARIA' departments have?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What sections do the 'BEBIDAS' and 'PADARIA' departments have?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-was-the-total-sale-of-products-in-of-each-business-area-in-the-first-quarter-of-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      What was the total sale of products (in $) of each Business Area in the first quarter of 2019?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What was the total sale of products (in $) of each Business Area in the first quarter of 2019?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura do Projeto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-1-verifica-a-funcao-de-recuperacao-de-dados-da-tabela-data_product_sales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1: Verifica a função de recuperação de dados da tabela data_product_sales.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-2-processamento-de-consultas-e-calculo-do-ticket-medio-tm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2: Processamento de Consultas e Cálculo do Ticket Médio (TM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-3-visualizacao-de-filmes-por-genero-e-ano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3: Visualização de Filmes por Gênero e Ano
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-the-10-most-expensive-products-in-the-company" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the 10 most expensive products in the company?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What are the 10 most expensive products in the company?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sections-do-the-bebidas-and-padaria-departments-have" class="md-nav__link">
+    <span class="md-ellipsis">
+      What sections do the 'BEBIDAS' and 'PADARIA' departments have?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What sections do the 'BEBIDAS' and 'PADARIA' departments have?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-was-the-total-sale-of-products-in-of-each-business-area-in-the-first-quarter-of-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      What was the total sale of products (in $) of each Business Area in the first quarter of 2019?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What was the total sale of products (in $) of each Business Area in the first quarter of 2019?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-consulta_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado da consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura do Projeto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-1-verifica-a-funcao-de-recuperacao-de-dados-da-tabela-data_product_sales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1: Verifica a função de recuperação de dados da tabela data_product_sales.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-2-processamento-de-consultas-e-calculo-do-ticket-medio-tm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2: Processamento de Consultas e Cálculo do Ticket Médio (TM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-3-visualizacao-de-filmes-por-genero-e-ano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3: Visualização de Filmes por Gênero e Ano
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="consultas-sql">Consultas SQL</h1>
+<h2 id="what-are-the-10-most-expensive-products-in-the-company">What are the 10 most expensive products in the company?</h2>
+<p>para responder essa pergunta utilizei a seguinte query: </p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="n">PRODUCT_COD</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PRODUCT_NAME</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PRODUCT_VAL</span>
+<span class="k">FROM</span><span class="w"> </span>
+<span class="n">data_product</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="w">    </span><span class="n">PRODUCT_VAL</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="resultado-da-consulta">Resultado da consulta</h3>
+<p><img alt="Descrição da imagem" src="../images/sql1.png" /></p>
+<h2 id="what-sections-do-the-bebidas-and-padaria-departments-have">What sections do the 'BEBIDAS' and 'PADARIA' departments have?</h2>
+<p>para responder essa pergunta utilizei a seguinte query: </p>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="n">DEP_NAME</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SECTION_NAME</span>
+<span class="k">FROM</span><span class="w"> </span>
+<span class="n">data_product</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span>
+<span class="w">    </span><span class="n">DEP_NAME</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;BEBIDAS&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PADARIA&#39;</span><span class="p">)</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="w">    </span><span class="n">DEP_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">SECTION_NAME</span><span class="p">;</span>
+</code></pre></div>
+Ou seja, dentro do departamento de <strong>BEBIDAS</strong>, temos: <code>bebidas</code>, vinhos, cervejas e refrescos. Já em <strong>PADARIA</strong>,  doces-e-sobremesas, queijos-e-frios, <code>padaria</code> e <code>gestante</code>.</p>
+<p><strong>OBS:</strong> Vale ressaltar as sessões em destaque, sessão de gestante no departamento padaria, não parece fazer sentido. E a sessão com o mesmo nome do departamento, vale entender a regra do negócio.</p>
+<h3 id="resultado-da-consulta_1">Resultado da consulta</h3>
+<p><img alt="Descrição da imagem" src="../images/sql2.png" /></p>
+<h2 id="what-was-the-total-sale-of-products-in-of-each-business-area-in-the-first-quarter-of-2019">What was the total sale of products (in $) of each Business Area in the first quarter of 2019?</h2>
+<p>Nesta query foi levado em consideração que para encontrar o valor total de vendas, multiplicamos o valor pela quantidade. Mas se o campo valor, já está refletido isso. A query mudaria apenas o <code>SUM</code> no <code>SELECT</code> para <code>SUM(ps.SALES_VALUE)</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="n">sc</span><span class="p">.</span><span class="n">BUSINESS_NAME</span><span class="p">,</span>
+<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">ps</span><span class="p">.</span><span class="n">SALES_QTY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">SALES_VALUE</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TOTAL_SALES</span>
+<span class="k">FROM</span><span class="w"> </span>
+<span class="w">    </span><span class="n">data_product_sales</span><span class="w"> </span><span class="n">ps</span>
+<span class="k">JOIN</span><span class="w"> </span>
+<span class="w">    </span><span class="n">data_store_cad</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="n">STORE_CODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="n">STORE_CODE</span>
+<span class="k">WHERE</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ps</span><span class="p">.</span><span class="nb">DATE</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2019-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="nb">DATE</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;2019-04-01&#39;</span><span class="w">  </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="w">    </span><span class="n">sc</span><span class="p">.</span><span class="n">BUSINESS_NAME</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+<span class="w">    </span><span class="n">TOTAL_SALES</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div>
+<h3 id="resultado-da-consulta_2">Resultado da consulta</h3>
+<p><img alt="Descrição da imagem" src="../images/sql3.png" /></p>
+<h2 id="arquitetura-do-projeto">Arquitetura do Projeto</h2>
+<p>O projeto foi organizado em quatro arquivos principais, utilizando conceitos de Programação Orientada a Objetos para maior modularidade:</p>
+<p><strong>Classe <code>Database</code>:</strong>
+   - Responsável por gerenciar a conexão com o banco de dados MySQL.
+   - A função <code>retrieve_data</code> permite que a consulta seja feita de maneira flexível, com base em parâmetros fornecidos (ex.: <code>product_code</code>, <code>store_code</code> e intervalo de <code>date</code>).</p>
+<p><strong>Abstração com POO:</strong>
+   - A Programação Orientada a Objetos foi utilizada para encapsular a lógica da conexão e consulta dentro da classe <code>Database</code>. Isso facilita a reutilização e modularização do código em diferentes partes do projeto.
+   - A função criada foi testada e implementada no <code>case_1</code>.</p>
+<ul>
+<li><code>database.py</code>: Classe responsável pela conexão com o banco de dados MySQL e pela execução de consultas SQL.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">mysql.connector</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">mysql.connector</span> <span class="kn">import</span> <span class="n">Error</span>
+
+<span class="k">class</span> <span class="nc">Database</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">database</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="n">database</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Estabelece a conexão com o banco de dados.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+                <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span>
+                <span class="n">port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span>
+                <span class="n">user</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span>
+                <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">,</span>
+                <span class="n">database</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection ok.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fecha a conexão com o banco de dados.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="o">.</span><span class="n">is_connected</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection closed.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">retrieve_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">store_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Recupera dados da tabela data_product_sales com base nos parâmetros fornecidos.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="o">.</span><span class="n">is_connected</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+
+            <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM data_product_sales WHERE 1=1&quot;</span>  <span class="c1"># Começar a consulta com um true</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">if</span> <span class="n">product_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">query</span> <span class="o">+=</span> <span class="s2">&quot; AND product_code = </span><span class="si">%s</span><span class="s2">&quot;</span>
+                <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">product_code</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">store_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">query</span> <span class="o">+=</span> <span class="s2">&quot; AND store_code = </span><span class="si">%s</span><span class="s2">&quot;</span>
+                <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">store_code</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">date</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">query</span> <span class="o">+=</span> <span class="s2">&quot; AND date BETWEEN </span><span class="si">%s</span><span class="s2"> AND </span><span class="si">%s</span><span class="s2">&quot;</span>
+                <span class="n">params</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+
+            <span class="c1"># Executa a consulta</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cur</span><span class="p">:</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+            <span class="c1"># Cria um DataFrame com os resultados</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">cur</span><span class="o">.</span><span class="n">description</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">df</span>
+
+        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>  <span class="c1"># Retorna um DataFrame vazio em caso de erro</span>
+    <span class="k">def</span> <span class="nf">execute_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executa uma consulta SQL e retorna um DataFrame.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="o">.</span><span class="n">is_connected</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnx</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">df</span>
+        <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error executing query: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>  <span class="c1"># Retorna um DataFrame vazio em caso de erro</span>
+</code></pre></div>
+<h2 id="case-1-verifica-a-funcao-de-recuperacao-de-dados-da-tabela-data_product_sales">Case 1: Verifica a função de recuperação de dados da tabela <code>data_product_sales</code>.</h2>
+<p>Utiliza a classe Database para conexão e faz uso da função <code>retrieve_data</code> para realizar consultar com filtros no banco.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="nn">database</span> <span class="kn">import</span> <span class="n">Database</span>
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_retrieve_data</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">),</span>
+        <span class="n">port</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PORT&#39;</span><span class="p">)),</span>
+        <span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">),</span>
+        <span class="n">password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">),</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Teste</span>
+    <span class="n">my_data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">retrieve_data</span><span class="p">(</span><span class="n">product_code</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">store_code</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;2019-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-01-31&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valid parameters&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_retrieve_data</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="case-2-processamento-de-consultas-e-calculo-do-ticket-medio-tm">Case 2: Processamento de Consultas e Cálculo do Ticket Médio (TM)</h2>
+<p>Este caso mostra como processar dados de vendas e calcular o Ticket Médio (TM) usando a classe <code>Database</code> e o pandas para manipulação dos dados. O código foi estruturado da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">database</span> <span class="kn">import</span> <span class="n">Database</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">QueryProcessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">db</span>
+
+    <span class="k">def</span> <span class="nf">fetch_stores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT</span>
+<span class="s2">            STORE_CODE,</span>
+<span class="s2">            STORE_NAME,</span>
+<span class="s2">            BUSINESS_NAME,</span>
+<span class="s2">            BUSINESS_CODE</span>
+<span class="s2">        FROM data_store_cad</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fetch_sales</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        SELECT</span>
+<span class="s2">            STORE_CODE,</span>
+<span class="s2">            DATE,</span>
+<span class="s2">            SALES_VALUE,</span>
+<span class="s2">            SALES_QTY</span>
+<span class="s2">        FROM data_store_sales</span>
+<span class="s2">        WHERE DATE BETWEEN &#39;</span><span class="si">{</span><span class="n">start_date</span><span class="si">}</span><span class="s2">&#39; AND &#39;</span><span class="si">{</span><span class="n">end_date</span><span class="si">}</span><span class="s2">&#39;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_queries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+        <span class="n">stores_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_stores</span><span class="p">()</span>
+        <span class="n">sales_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_sales</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+
+        <span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">stores_df</span><span class="p">,</span> <span class="n">sales_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;STORE_CODE&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+        <span class="n">average_sales_df</span> <span class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;STORE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;BUSINESS_NAME&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+            <span class="n">Average_Sales_Value</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;SALES_VALUE&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">),</span>
+            <span class="n">Total_Sales_Qty</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;SALES_QTY&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+        <span class="c1"># Calcula a média e arredonda</span>
+        <span class="n">average_sales_df</span><span class="p">[</span><span class="s1">&#39;TM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">average_sales_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Average_Sales_Value&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Total_Sales_Qty&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Total_Sales_Qty&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span> 
+            <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Renomeia as colunas conforme o necessário</span>
+        <span class="n">average_sales_df</span> <span class="o">=</span> <span class="n">average_sales_df</span><span class="p">[[</span><span class="s1">&#39;STORE_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;BUSINESS_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;TM&#39;</span><span class="p">]]</span>
+        <span class="n">average_sales_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Loja&#39;</span><span class="p">,</span> <span class="s1">&#39;Categoria&#39;</span><span class="p">,</span> <span class="s1">&#39;TM&#39;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">average_sales_df</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Crie uma instância da classe Database com as credenciais</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">),</span>
+        <span class="n">port</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PORT&#39;</span><span class="p">)),</span>
+        <span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">),</span>
+        <span class="n">password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">),</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Crie um processador de consultas e processa as consultas</span>
+    <span class="n">processor</span> <span class="o">=</span> <span class="n">QueryProcessor</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">process_queries</span><span class="p">(</span><span class="s1">&#39;2019-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-12-31&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Exibe o resultado no formato desejado</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result_df</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+    <span class="c1"># Fecha a conexão</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="case-3-visualizacao-de-filmes-por-genero-e-ano">Case 3: Visualização de Filmes por Gênero e Ano</h2>
+<p>Este exemplo mostra como criar uma visualização de filmes, categorizados por gênero, ao longo dos anos. Utiliza a biblioteca matplotlib para gerar gráficos de barras empilhadas.</p>
+<p>Utilizei a biblioteca matplotlib, geralmente utilizo ela para fazer análises e plot de gráficos, junto ao pandas, dito isso, foi uma escolha natural.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">database</span> <span class="kn">import</span> <span class="n">Database</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">MovieVisualizer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">db</span>
+
+    <span class="k">def</span> <span class="nf">fetch_movies_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT Genre, Votes, Year FROM IMDB_movies&quot;</span>
+        <span class="n">movies_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">execute_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">movies_df</span>
+
+    <span class="k">def</span> <span class="nf">plot_genre_distribution_by_year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">movies_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_movies_data</span><span class="p">()</span>
+
+        <span class="c1"># Quebrar os gêneros em linhas separadas</span>
+        <span class="n">movies_df</span><span class="p">[</span><span class="s1">&#39;Genre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movies_df</span><span class="p">[</span><span class="s1">&#39;Genre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="n">movies_exploded</span> <span class="o">=</span> <span class="n">movies_df</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;Genre&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Contar a quantidade de filmes por gênero e ano</span>
+        <span class="n">genre_year_counts</span> <span class="o">=</span> <span class="n">movies_exploded</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Criar um gráfico de barras empilhadas</span>
+        <span class="n">genre_year_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;tab20&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Adicionar títulos e rótulos</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição de Filmes por Gênero ao Longo dos Anos&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ano&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Filmes&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># Ajusta o layout para evitar sobreposição</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Conexão ao banco de dados e execução do visualizador</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">),</span>
+        <span class="n">port</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PORT&#39;</span><span class="p">)),</span>
+        <span class="n">user</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">),</span>
+        <span class="n">password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">),</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">visualizer</span> <span class="o">=</span> <span class="n">MovieVisualizer</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
+    <span class="n">visualizer</span><span class="o">.</span><span class="n">plot_genre_distribution_by_year</span><span class="p">()</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<div align="center">
+<h2>Herbert Souto</h2>
+<a href="https://github.com/herbertsouto">GitHub</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
