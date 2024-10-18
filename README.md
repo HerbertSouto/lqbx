@@ -17,7 +17,7 @@ Para acessar a documentação completa do projeto, visite: [Documentação lqbx]
 
 Antes de executar o projeto, você precisa ter o seguinte instalado:
 
-- Python 3.
+- Python 3.12
 
 - Bibliotecas Python necessárias:
 
