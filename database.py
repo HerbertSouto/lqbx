@@ -37,20 +37,38 @@ class Database:
             if self.cnx is None or not self.cnx.is_connected():
                 self.connect()
                 
-            query = "SELECT * FROM data_product_sales WHERE 1=1"  # Começar a consulta com um true
+            # Consulta inicial que sempre é verdadeira para facilitar a adição de filtros
+            query = "SELECT * FROM data_product_sales WHERE 1=1"
             params = []
 
+            # Verifica se product_code é uma lista de códigos ou um único código
             if product_code is not None:
-                query += " AND product_code = %s"
-                params.append(product_code)
+                if isinstance(product_code, (list, tuple)):
+                    # Se for uma lista/tupla, usa a cláusula IN
+                    placeholders = ', '.join(['%s'] * len(product_code))
+                    query += f" AND product_code IN ({placeholders})"
+                    params.extend(product_code)
+                else:
+                    # Caso contrário, usa igualdade simples
+                    query += " AND product_code = %s"
+                    params.append(product_code)
 
             if store_code is not None:
-                query += " AND store_code = %s"
-                params.append(store_code)
+                if isinstance(store_code, (list, tuple)):
+                    placeholders = ', '.join(['%s'] * len(store_code))
+                    query += f" AND store_code IN ({placeholders})"
+                    params.extend(store_code)
+                else:
+                    query += " AND store_code = %s"
+                    params.append(store_code)
 
-            if date is not None and len(date) == 2:
-                query += " AND date BETWEEN %s AND %s"
-                params.extend(date)
+            if date is not None:
+                if isinstance(date, (list, tuple)) and len(date) == 2:
+                    query += " AND date BETWEEN %s AND %s"
+                    params.extend(date)
+                else:
+                    print("Formato de data inválido. Use uma lista ou tupla com duas datas [início, fim].")
+                    return pd.DataFrame()
 
             # Executa a consulta
             with self.cnx.cursor() as cur:
@@ -63,7 +81,8 @@ class Database:
 
         except Error as e:
             print(f"Error: {e}")
-            return pd.DataFrame()  # Retorna um DataFrame vazio em caso de erro
+            return pd.DataFrame()
+
     def execute_query(self, query):
         """Executa uma consulta SQL e retorna um DataFrame."""
         if self.cnx is None or not self.cnx.is_connected():
