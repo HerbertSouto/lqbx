@@ -14,14 +14,17 @@ def test_retrieve_data():
     )
 
     # Teste
-    my_data = db.retrieve_data(product_code=18, store_code=1, date=['2019-01-01', '2019-01-31'])
-    print("Valid parameters")
+    my_data = db.retrieve_data(
+        product_code=[18, 48, 172],
+        store_code=[1, 2, 3],
+        date=['2019-01-01', '2019-01-31']
+    )
+    
+    # Imprime os dados retornados
+    print("Dados retornados:")
     print(my_data)
-
+    
     db.close()
 
 if __name__ == "__main__":
     test_retrieve_data()
-
-
-
